@@ -1,0 +1,18 @@
+{
+
+  "compilerOptions": {
+    "outDir": "./build/ts",
+    "allowJs": false,
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "jsx": "react",
+    "skipLibCheck": true,
+    "target": "es2015"
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

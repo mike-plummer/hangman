@@ -1,0 +1,55 @@
+{
+  "name": "redux-sagas",
+  "version": "1.0.0",
+  "description": "Using redux-saga in a Typescript React project",
+  "main": "index.tsx",
+  "repository": "https://github.com/mike-plummer/redux-sagas.git",
+  "author": "Mike Plummer",
+  "license": "MIT",
+  "scripts": {
+    "dev": "webpack-dev-server --mode=development --hot",
+    "build": "webpack --mode=production"
+  },
+  "dependencies": {
+    "lodash": "^4.17.10",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-router": "^4.3.1",
+    "semantic-ui-react": "^0.81.1"
+  },
+  "resolutions": {
+    "babel-core": "7.0.0-bridge.0",
+    "lodash": "^4.17.10"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.51",
+    "@babel/polyfill": "^7.0.0-beta.51",
+    "@babel/preset-env": "^7.0.0-beta.51",
+    "@babel/preset-react": "^7.0.0-beta.51",
+    "@babel/preset-stage-2": "^7.0.0-beta.51",
+    "@babel/runtime": "^7.0.0-beta.51",
+    "@types/lodash": "^4.14.109",
+    "@types/react": "^16.3.17",
+    "@types/react-dom": "^16.0.6",
+    "@types/react-loadable": "^5.4.0",
+    "@types/react-redux": "^6.0.2",
+    "@types/react-router": "^4.0.26",
+    "@types/react-router-dom": "^4.2.7",
+    "awesome-typescript-loader": "^5.0.0",
+    "babel-loader": "8.0.0-beta.3",
+    "css-loader": "^0.28.11",
+    "html-webpack-plugin": "^3.2.0",
+    "image-webpack-loader": "^4.3.1",
+    "mini-css-extract-plugin": "^0.4.0",
+    "react-hot-loader": "^4.3.2",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.0",
+    "redux-saga": "^0.16.0",
+    "style-loader": "^0.21.0",
+    "typescript": "2.8.3",
+    "webpack": "^4.12.0",
+    "webpack-cli": "^3.0.6",
+    "webpack-dev-server": "^3.1.4"
+  }
+}
