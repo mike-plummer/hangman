@@ -58,9 +58,13 @@ module.exports = {
         use: [
           'file-loader',
           {
-            loader: 'image-webpack-loader',
-          },
+            loader: 'image-webpack-loader'
+          }
         ]
+      },
+      {
+        test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
+        use: [{ loader: 'file-loader' }]
       }
     ]
   },

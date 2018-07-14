@@ -64,3 +64,6 @@ typings/
 .idea
 .awcache
 build/
+
+src/test/screenshots/
+src/test/videos/

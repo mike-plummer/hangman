@@ -1,30 +1,20 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { applyMiddleware, createStore } from 'redux'
-import createSagaMiddleware from 'redux-saga'
+import { AppContainer as HotLoader } from 'react-hot-loader';
+import store from './store/store';
+import Game from './game/game';
 
-import { rootReducer } from './store/reducer';
-import { App } from './app/app';
-import sagas from './store/sagas';
-import { BrowserRouter } from 'react-router-dom';
-import { Provider } from 'react-redux';
+const render = (Component): void => {
+  ReactDOM.render(
+    <HotLoader>
+      <Component compiler="TypeScript" framework="React" store={store} />
+    </HotLoader>,
+    document.getElementById('game')
+  );
+};
 
-// create the saga middleware
-const sagaMiddleware = createSagaMiddleware();
-// mount it on the Store
-const store = createStore(
-  rootReducer,
-  applyMiddleware(sagaMiddleware)
-);
+render(Game);
 
-sagaMiddleware.run(sagas);
-
-
-ReactDOM.render(
-  <Provider store={store}>
-    <BrowserRouter>
-      <App/>
-    </BrowserRouter>
-  </Provider>,
-  document.getElementById('root')
-);
+if (module['hot']) {
+  module['hot'].accept('./game/game', () => render(Game));
+}

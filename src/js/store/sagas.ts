@@ -1,8 +1,8 @@
 import { flatten } from 'lodash';
-import App from '../app/store/app.sagas';
+import Game from '../game/store/game.sagas';
 
 export default function* root() {
   yield flatten([
-    App
+    Game // Must be last
   ]);
 }

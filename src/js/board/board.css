@@ -1,0 +1,9 @@
+.Board {
+    margin: 30px;
+    font-family: 'Roboto', 'Arial', sans-serif;
+}
+
+.FlexRow {
+    display: flex;
+    flex-direction: row;
+}

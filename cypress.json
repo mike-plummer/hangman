@@ -1,0 +1,11 @@
+{
+  "baseUrl": "http://localhost:8080",
+  "fixturesFolder": "src/test/fixtures",
+  "integrationFolder": "src/test/integration",
+  "pluginsFile": "src/test/plugins",
+  "screenshotsFolder": "src/test/screenshots",
+  "videosFolder": "src/test/videos",
+  "supportFile": "src/test/support",
+  "reporter": "junit",
+  "reporterOptions": {}
+}

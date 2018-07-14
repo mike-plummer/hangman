@@ -11,12 +11,12 @@ export interface SagaConfig {
 }
 
 export interface WatcherConfig {
-  [ actionType: string ]: SagaConfig;
+  [actionType: string]: SagaConfig;
 }
 
 export const createWatchers = (watcherConfig: WatcherConfig): ForkEffect[] =>
   Object.keys(watcherConfig).reduce((acc: ForkEffect[], actionType: string) => {
-    const { saga, effect } = watcherConfig[ actionType ];
+    const { saga, effect } = watcherConfig[actionType];
 
     function* watcher(): IterableIterator<ForkEffect> {
       yield effect(actionType, saga);
