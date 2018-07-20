@@ -1,0 +1,11 @@
+.status {
+
+}
+
+.status.win {
+    color: green;
+}
+
+.status.loss {
+    color: darkred;
+}

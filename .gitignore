@@ -68,3 +68,4 @@ build/
 src/test/screenshots/
 src/test/videos/
 /dist
+test-results.xml

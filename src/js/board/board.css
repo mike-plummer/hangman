@@ -6,4 +6,20 @@
 .FlexRow {
     display: flex;
     flex-direction: row;
+    justify-content:center;
+    align-items: center;
+}
+
+.FlexRow > * {
+    margin: auto;
+}
+
+.Controls {
+    margin: 10px;
+    padding: 10px;
+    border: 1px black solid;
+}
+
+.Controls > * {
+    width: 100%;
 }

@@ -30,7 +30,11 @@ interface BoardStateProps {
 type BoardProps = BoardOwnProps & BoardDispatchProps & BoardStateProps;
 
 class Board extends React.Component<BoardProps> {
-  private onKeyPress = (event: React.KeyboardEvent<HTMLDivElement>): void => {
+  componentDidMount(): void {
+    document.addEventListener('keypress', this.onKeyPress);
+  }
+
+  private onKeyPress = (event: KeyboardEvent): void => {
     const { guesses, guess, status } = this.props;
 
     if (status !== HM.GameStatus.IN_PROGRESS) {
@@ -46,15 +50,18 @@ class Board extends React.Component<BoardProps> {
   render(): React.ReactNode {
     const { guesses, exposed, lives, status, startGame, timeRemaining } = this.props;
     return (
-      <div onKeyPress={this.onKeyPress} tabIndex={0} data-cy="board" className="Board">
-        <GameStatus status={status}/>
+      <div tabIndex={0} data-cy="board" className="Board">
         <span className="FlexRow">
-          <Timer timeRemaining={timeRemaining}/>
+          <GameStatus status={status}/>
+        </span>
+        <div className="Controls">
+          <span className="FlexRow">
+            <Timer timeRemaining={timeRemaining}/>
+            <Lives lives={lives}/>
+          </span>
           <GameControl onClick={startGame} status={status}/>
-        </span>
-        <span className="FlexRow">
-          <Lives lives={lives} />
-        </span>
+        </div>
+
         <span className="FlexRow">
           <WordDisplay exposed={exposed}/>
         </span>

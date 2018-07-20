@@ -27,7 +27,8 @@ const handleStartGame = (state: HM.State.Game) =>
 const handleEndGame = (state: HM.State.Game, { result }: GameActionTypes.EndGame) =>
   Immutable.from(state).merge({
     timeRemaining: 0,
-    gameStatus: result
+    gameStatus: result,
+    exposed: [...state.word]
   });
 
 const handleSetWord = (state: HM.State.Game, { word }: GameActionTypes.SetWord) =>
