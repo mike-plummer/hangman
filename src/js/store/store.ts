@@ -11,7 +11,6 @@ const middleware: Middleware[] = [sagaMiddleware];
 const configureStore = (): Store<HM.State.State> => {
   const enhancers = composeWithDevTools(applyMiddleware(...middleware));
 
-  // Attempt to load persisted state from sessionStorage
   const store: Store<HM.State.State> = createStore(rootReducer, enhancers);
 
   // run sagas

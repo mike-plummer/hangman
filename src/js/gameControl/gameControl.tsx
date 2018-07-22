@@ -12,6 +12,6 @@ export const GameControl: React.SFC<GameControlProps> = ({ onClick, status }) =>
     disabled={status === HM.GameStatus.IN_PROGRESS}
     data-cy="start"
   >
-    <strong>Start</strong>
+    <strong>START</strong>
   </button>
 );
